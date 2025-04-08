@@ -1,0 +1,84 @@
+@import "tailwindcss";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.wrapper {
+  width: 90%;
+  margin: 5px auto;
+}
+body {
+  font-family: "Poppins", sans-serif;
+}
+
+.btn {
+  padding: 6px 12px;
+  border-radius: 10px;
+  border: solid 1px black;
+}
+
+.pd1 {
+  padding: 4px;
+}
+
+.pd2 {
+  padding: 8px;
+}
+
+.pd3 {
+  padding: 12px;
+}
+
+.pd4 {
+  padding: 16px;
+}
+
+.pd5 {
+  padding: 20px;
+}
+
+.pd6 {
+  padding: 24px;
+}
+
+.pd7 {
+  padding: 28px;
+}
+
+.pd8 {
+  padding: 32px;
+}
+
+.pd9 {
+  padding: 36px;
+}
+
+.pd10 {
+  padding: 40px;
+}
+
+.tagline {
+  position: relative;
+  color: rgb(250, 116, 48);
+  padding-bottom: 5px;
+
+  overflow-y: hidden;
+ animation: updown 1s ease-in-out infinite alternate;
+}
+
+@keyframes updown {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-5px);
+  }
+}
+
+
+
+
+

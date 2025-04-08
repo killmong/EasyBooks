@@ -1,0 +1,112 @@
+.login-container {
+  width: 90%;
+  margin: 0 0 0 auto;
+}
+
+.left-container {
+  width: 50%;
+  margin: 60px auto;
+  padding: 20px 90px 0 0;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  text-align: start;
+}
+
+.input-container {
+  
+    margin: 10px 30px 20px 0;
+
+}
+
+
+.input-container label {
+    font-size: 16px;
+    color: #000;
+    text-transform: capitalize;
+    letter-spacing: -0.5px;
+}
+.input-container input {
+  margin: 3px 0;
+  padding: 8px 20px;
+  border-radius: 20px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+}
+
+.input-container input:focus {
+  outline: none;
+  border: 1px solid #007bff;
+}
+.button {
+    margin: 10px 0 0 0;
+  padding: 10px 30px;
+  border: 1px solid #007bff;
+  border-radius: 30px;
+  background-color: #fff;
+  color: #000;
+  gap: 5px;
+  text-align: center;
+  align-items: center;
+}
+
+.button:hover {
+  background-color: #007bff;
+  color: #fff;
+  transition: 0.3s ease-in-out;
+}
+
+.bg {
+  background-color: #1111ee;
+  opacity: 0.7;
+  background-image: linear-gradient(
+      30deg,
+      #bec1f2 12%,
+      transparent 12.5%,
+      transparent 87%,
+      #bec1f2 87.5%,
+      #bec1f2
+    ),
+    linear-gradient(
+      150deg,
+      #bec1f2 12%,
+      transparent 12.5%,
+      transparent 87%,
+      #bec1f2 87.5%,
+      #bec1f2
+    ),
+    linear-gradient(
+      30deg,
+      #bec1f2 12%,
+      transparent 12.5%,
+      transparent 87%,
+      #bec1f2 87.5%,
+      #bec1f2
+    ),
+    linear-gradient(
+      150deg,
+      #bec1f2 12%,
+      transparent 12.5%,
+      transparent 87%,
+      #bec1f2 87.5%,
+      #bec1f2
+    ),
+    linear-gradient(
+      60deg,
+      #bec1f277 25%,
+      transparent 25.5%,
+      transparent 75%,
+      #bec1f277 75%,
+      #bec1f277
+    ),
+    linear-gradient(
+      60deg,
+      #bec1f277 25%,
+      transparent 25.5%,
+      transparent 75%,
+      #bec1f277 75%,
+      #bec1f277
+    );
+  background-size: 80px 140px;
+  background-position: 0 0, 0 0, 40px 70px, 40px 70px, 0 0, 40px 70px;
+}

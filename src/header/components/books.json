@@ -1,0 +1,37 @@
+
+  {
+    isbn: "9780134093413",
+    title: "Computer Networking: A Top-Down Approach",
+    subtitle: "7th Edition",
+    author: "James F. Kurose, Keith W. Ross",
+    published: ISODate("2016-03-01"),
+    publisher: "Pearson",
+    pages: 864,
+    description: "This book provides a comprehensive introduction to the field of computer networking, with a focus on the Internet's architecture and protocols.",
+    website: "https://www.pearson.com/us/higher-education/program/Kurose-Computer-Networking-A-Top-Down-Approach-7th-Edition/PGM332539.html",
+    genre: "Education"
+  },
+  {
+    isbn: "9780262033848",
+    title: "Introduction to Algorithms",
+    subtitle: "3rd Edition",
+    author: "Thomas H. Cormen, Charles E. Leiserson, Ronald L. Rivest, Clifford Stein",
+    published: ISODate("2009-07-31"),
+    publisher: "The MIT Press",
+    pages: 1312,
+    description: "This book offers a detailed and comprehensive introduction to the modern study of computer algorithms.",
+    website: "https://mitpress.mit.edu/books/introduction-algorithms-third-edition",
+    genre: "Education"
+  },
+  {
+    isbn: "9780131103627",
+    title: "The C Programming Language",
+    subtitle: "2nd Edition",
+    author: "Brian W. Kernighan, Dennis M. Ritchie",
+    published: ISODate("1988-03-22"),
+    publisher: "Prentice Hall",
+    pages: 272,
+    description: "Known as 'K&R', this book is the definitive reference guide to the C programming language, written by its creators.",
+    website: "https://www.pearson.com/us/higher-education/program/Kernighan-C-Programming-Language-2nd-Edition/PGM332539.html",
+    genre: "Education"
+  },

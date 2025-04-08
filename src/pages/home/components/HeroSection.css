@@ -1,0 +1,29 @@
+.heroBg{
+    background-image: url("/HeroBg.png");
+    background-color: aliceblue;
+    background-repeat: no-repeat;
+}
+
+.heroBg2{
+    background-image: url("/HeroBg2.png");
+    background-color: aliceblue;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.button{
+    padding: 10px 30px;
+    border: 1px solid #000;
+    border-radius: 10px;
+    background-color: #fff;
+    color: #000;
+    gap: 5px;
+    text-align: center;
+    align-items: center;
+}
+
+.button:hover{
+    background-color: #000;
+    color: #fff;
+    transition: 0.3s ease-in-out;
+}
