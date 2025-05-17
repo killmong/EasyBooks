@@ -1,28 +1,43 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 
 const InputField = ({
-  type,
+  label,
+  register,
   name,
-  onChange,
-  text,
-  value,
-
-  For,
-  id,
+  defaultValue,
+  type = "text",
+  disabled = false,
+  required,
+  errors,
 }) => {
-  return (
-    <div className="flex flex-col gap-2 mb-4">
-      <label className="text-base capitalize font-medium " htmlFor={For}>{text}</label>
-      <input
-        type={type}
-        placeholder={text}
-        className="focus:outline-0 "
-        onChange={onChange}
-        name={name}
+  const [isFilled, setIsFilled] = useState(false);
 
-        id={id}
-        value={value}
+  useEffect(() => {
+    setIsFilled(!!defaultValue);
+  }, [defaultValue]);
+
+  const handleChange = (e) => {
+    setIsFilled(!!e.target.value);
+  };
+
+  return (
+    <div className="w-full pd4">
+      <label className="block text-gray-800 font-medium mb-1">{label}</label>
+      <input
+        {...register(name, { required })}
+        defaultValue={defaultValue}
+        onChange={handleChange}
+        type={type}
+        disabled={disabled}
+        className={`w-full pd2 rounded-md border outline-none bg-white transition-all duration-300 shadow-sm
+          ${errors?.[name] ? "border-red-500" : "border-gray-300"}
+          ${isFilled ? "shadow-[0_0_0_3px_rgba(139,92,246,0.3)]" : ""}
+          ${disabled ? "bg-gray-100 cursor-not-allowed" : ""}
+          focus:border-violet-500 focus:shadow-[0_0_0_3px_rgba(139,92,246,0.4)]`}
       />
+      {errors?.[name] && (
+        <p className="text-red-500 text-sm mt-1">This field is required.</p>
+      )}
     </div>
   );
 };

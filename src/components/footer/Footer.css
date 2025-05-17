@@ -1,0 +1,102 @@
+.footer {
+  width: 90%;
+  margin: 0 auto;
+  padding: 20px 40px;
+}
+
+.payment-logos {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  margin-top: 20px;
+}
+.payment-logos img {
+  height: 40px;
+  margin: 0 10px;
+  object-fit: contain;
+}
+
+.mx5 {
+  margin: 0 20px;
+}
+
+.pad {
+  padding: 30px 0;
+}
+.services {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+}
+.services img {
+  height: 40px;
+  margin: 0 10px;
+  object-fit: contain;
+}
+
+.services img:hover {
+  transform: scale(1.1);
+  transition: 0.3s;
+}
+
+.animated-underline {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  color: #fff;
+
+}
+
+.animated-underline::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 2px;
+  width: 0;
+  background-color: #ecf0f4; /* Change to your desired color */
+  transition: width 0.4s ease;
+}
+
+.animated-underline:hover::after {
+  width: 100%;
+}
+.quick-links ul li {
+  margin-bottom: 8px;
+}
+
+.quick-links li {
+  text-decoration: none;
+  color: #6c757d;
+  transition: color 0.2s ease;
+}
+
+.quick-links li:hover {
+  color: #007bff;
+}
+.social-links {
+  text-align: center;
+}
+
+.icon-group {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+}
+
+.social-icon-link {
+  font-size: 1.5rem;
+  color: #6c757d;
+  transition: color 0.3s ease;
+}
+
+.social-icon-link:hover {
+  color: #007bff;
+}
+
+
+.mx{
+  margin: 0 5px;
+}

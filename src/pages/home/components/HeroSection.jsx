@@ -1,8 +1,13 @@
 import React, { useState, useEffect } from "react";
-import { useRef } from "react";
 import "./HeroSection.css";
 import { Swiper, SwiperSlide } from "swiper/react";
+import "swiper/css";
+import { Navigation, Pagination, Scrollbar,Autoplay, A11y } from "swiper/modules";
 
+import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
+import "swiper/css/scrollbar";
 
 const HeroSection = () => {
   const spanText = [
@@ -22,55 +27,42 @@ const HeroSection = () => {
 
   const [index, setIndex] = useState(0);
 
-  
   useEffect(() => {
     const interval = setInterval(() => {
       setIndex((prevIndex) => (prevIndex + 1) % spanText.length);
-    }, 3000);
+    }, 2000);
     return () => clearInterval(interval);
   });
 
-  
+  const slideImages = [
+    {
+      id: 1,
+      img: "/banner/img2.jpg",
+    },
+
+    { id: 2, img: "/banner/img3.jpg" },
+    {
+      id: 3,
+      img: "/banner/img4.jpg",
+    },
+  ];
   return (
-    <div
-     
-      className="text-5xl h-screen  font-bold text-center py-20"
-    >
+    <div className="text-5xl h-screen  font-bold text-center py-20">
       <section className="heroBg h-screen">
         <Swiper
+          modules={[Navigation, Pagination, Scrollbar, A11y, Autoplay]} // Make sure Autoplay is imported
           slidesPerView={1}
-          autoplay={{ delay: 3000 }}
-          onSlideChange={() => console.log("slide change")}
-          onSwiper={(swiper) => console.log(swiper)}
+          navigation
+          loop={true} // <-- This enables infinite looping
+          autoplay={{ delay: 3000, disableOnInteraction: false }} // <-- This enables autoplay
         >
-          <SwiperSlide>
-            <div className="w-full  h-full relative">
-              <img
-                src="/banner/banner1.webp"
-                className="w-full h-full object-cover "
-                alt="banner1"
-              />
-            </div>
-          </SwiperSlide>
-
-          <SwiperSlide>
-            <div className="w-full  h-full relative">
-              <img
-                src="/banner/banner2.webp"
-                alt="banner2"
-                className="w-full h-full object-cover"
-              />
-            </div>
-          </SwiperSlide>
-          <SwiperSlide>
-            <div className="w-full  h-full relative">
-              <img
-                src="/banner/banner3.webp"
-                alt="banner3"
-                className="w-full  h-full object-cover"
-              />
-            </div>
-          </SwiperSlide>
+          {slideImages.map((book) => ( 
+            <SwiperSlide key={book.id}>
+              <div className="relative bg-violet-600 img-container w-full h-auto overflow-hidden">
+                <img className="w-full h-full object-contain" src={book.img} />
+              </div>
+            </SwiperSlide>
+          ))}
         </Swiper>
         <div className="pd10 ">
           <h1 className="text-7xl underline capitalize text-black   ">

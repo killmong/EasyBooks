@@ -14,6 +14,10 @@ body {
   font-family: "Poppins", sans-serif;
 }
 
+.mx-auto {
+  margin: 0 auto;
+}
+
 .btn {
   padding: 6px 12px;
   border-radius: 10px;
@@ -66,7 +70,7 @@ body {
   padding-bottom: 5px;
 
   overflow-y: hidden;
- animation: updown 1s ease-in-out infinite alternate;
+  animation: updown 1s ease-in-out infinite alternate;
 }
 
 @keyframes updown {
@@ -78,7 +82,211 @@ body {
   }
 }
 
+.icons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2px;
+  font-size: 24px;
+}
+.icons:hover {
+  color: rgb(250, 116, 48);
+  transition: all 0.3s ease-in-out;
+  transform: scale(1.2);
+  cursor: pointer;
+  text-decoration: none;
+}
+.icons:active {
+  transform: scale(0.9);
+  transition: all 0.1s ease-in-out;
+  color: rgb(226, 25, 25);
+}
+
+.cart-btn {
+  align-items: center;
+  appearance: none;
+  background-image: radial-gradient(
+    100% 100% at 100% 0,
+    #5adaff 0,
+    #5468ff 100%
+  );
+  border: 0;
+  border-radius: 6px;
+  box-shadow: rgba(45, 35, 66, 0.4) 0 2px 4px,
+    rgba(45, 35, 66, 0.3) 0 7px 13px -3px, rgba(58, 65, 111, 0.5) 0 -3px 0 inset;
+  box-sizing: border-box;
+  color: #fff;
+  cursor: pointer;
+  display: inline-flex;
+  font-family: "JetBrains Mono", monospace;
+  height: 48px;
+  justify-content: center;
+  line-height: 1;
+  list-style: none;
+  overflow: hidden;
+  padding-left: 16px;
+  padding-right: 16px;
+  position: relative;
+  text-align: left;
+  text-decoration: none;
+  transition: box-shadow 0.15s, transform 0.15s;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  white-space: nowrap;
+  will-change: box-shadow, transform;
+  font-size: 18px;
+}
+
+.cart-btn:focus {
+  box-shadow: #3c4fe0 0 0 0 1.5px inset, rgba(45, 35, 66, 0.4) 0 2px 4px,
+    rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #3c4fe0 0 -3px 0 inset;
+}
+
+.cart-btn:hover {
+  box-shadow: rgba(45, 35, 66, 0.4) 0 4px 8px,
+    rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #3c4fe0 0 -3px 0 inset;
+  transform: translateY(-2px);
+}
+
+.cart-btn:active {
+  box-shadow: #3c4fe0 0 3px 7px inset;
+  transform: translateY(2px);
+}
+
+.counter {
+  width: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  font-size: 20px;
+  padding: 10px;
+  background-color: white;
+  color: #5468ff;
+  border-radius: 10px;
+}
+
+.counter:hover {
+  background-color: #5468ff;
+  color: white;
+  cursor: pointer;
+  outline: none;
+  transition: all 0.3s ease-in-out;
+  border: solid 1px black;
+}
+
+.counter:active {
+  outline: none;
+  transition: all 0.1s ease-in-out;
+  background-color: #5468ff;
+  color: white;
+}
+.counter:focus {
+  outline: none;
+  box-shadow: #3c4fe0 0 0 0 1.5px inset, rgba(45, 35, 66, 0.4) 0 2px 4px,
+    rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #3c4fe0 0 -3px 0 inset;
+}
+.counter-value{
+  padding: 5px 15px ;
+  margin: 10px 10px;
+  border: 1px solid #5468ff;
+  border-radius: 5px;
+}
+.counter-value:hover{
+  background-color: #5468ff;
+  color: white;
+  cursor: pointer;
+  outline: none;
+  transition: all 0.3s ease-in-out;
+  border: solid 1px black;
+}
+.counter-value:active{
+  outline: none;
+  transition: all 0.1s ease-in-out;
+  background-color: #5468ff;
+  color: white;
+}
+
+/* Add in global.css or BookCategory.module.css if using CSS modules */
+.swiper-button-next,
+.swiper-button-prev {
+  color: #000 !important;           /* Make arrows black */
+  background-color: #ffffffb0;      /* Semi-transparent background */
+  padding: 20px;
+  border-radius: 4px;
+              /* Full rounded */
+  font-weight: bold;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+  transition: all 0.3s ease;
+}
+
+.swiper-button-next:hover,
+.swiper-button-prev:hover {
+  background-color: #ffffff;       /* On hover: more solid */
+  transform: scale(1.1);
+}
+.swiper-button-next:focus,
+.swiper-button-prev:focus {
+  background-color: #ffffff;       /* On hover: more solid */
+  transform: scale(1.1);
+}
+
+.swiper-button-next:active,
+.swiper-button-prev:active {
+  background-color: #ffffff;       /* On hover: more solid */
+  transform: scale(1.1);
+}
 
 
+/* CSS */
+.buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  max-width: 300px;
+}
 
+.custom-btn {
+  padding: 12px 20px;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
 
+/* Add to Cart - Green Gradient */
+.btn-cart {
+  background: linear-gradient(to right, #22c55e, #84cc16);
+  color: white;
+  box-shadow: 0 4px 6px rgba(34, 197, 94, 0.3);
+}
+
+.btn-cart:hover {
+  background: linear-gradient(to right, #16a34a, #65a30d);
+}
+
+/* Buy Now - Blue to Indigo Gradient */
+.btn-buy {
+  background: linear-gradient(to right, #2563eb, #7c3aed);
+  color: white;
+  box-shadow: 0 4px 6px rgba(59, 130, 246, 0.3);
+}
+
+.btn-buy:hover {
+  background: linear-gradient(to right, #1d4ed8, #6d28d9);
+}
+
+/* Wishlist - White Background with Pink Border */
+.btn-wishlist {
+  background: #fff;
+  color: #ec4899;
+  border: 2px solid #ec4899;
+  box-shadow: 0 2px 4px rgba(236, 72, 153, 0.2);
+}
+
+.btn-wishlist:hover {
+  background: #fdf2f8;
+}
